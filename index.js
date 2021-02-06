@@ -1,13 +1,26 @@
-// Connect to the storage account
-var storage = require('azure-storage');
+const storage = require('azure-storage');
+const Camera = require('./camera');
+const cameraData = require('./mock-cameras.json');
 
-// TODO: create camera
-class Camera {}
+require('dotenv').config()
 
-// TODO: change to use dotenv
-var blobService = storage.createBlobService(
-    process.env.ACCOUNT_NAME,
-    process.env.ACCOUNT_KEY
+const blobService = storage.createBlobService(
+    process.env.STORAGE_ACCOUNT_NAME,
+    process.env.STORAGE_ACCOUNT_KEY
 );
 
-// TODO: load images
+// parse the JSON file of cameras, create a new camera object, and then start
+const cameras = cameraData.map((camera) => {
+    const cameraObj = new Camera(
+        camera.deviceId,
+        camera.latitude,
+        camera.longitude,
+        blobService
+    );
+    return cameraObj;
+});
+
+// start all of the cameras
+cameras.forEach(camera => {
+    camera.start();
+});
