@@ -1,0 +1,31 @@
+{
+  "name": "possum-cam",
+  "version": "1.0.0",
+  "description": "A simulated array of motion-activated cameras. It uploads photos taken in the wild and uploads to storage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lynnaloo/possum-cam.git"
+  },
+  "keywords": [
+    "wildlife",
+    "possums",
+    "azure"
+  ],
+  "author": "Linda Nichols <lynnaloo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lynnaloo/possum-cam/issues"
+  },
+  "homepage": "https://github.com/lynnaloo/possum-cam#readme",
+  "dependencies": {
+    "azure-storage": "^2.10.3",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0"
+  }
+}
