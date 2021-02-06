@@ -1,0 +1,22 @@
+[
+    {
+        "deviceId" : "possum_cam_0001",
+        "latitude" : 36.86548450939611,
+        "longitude" : -76.30061739798448
+    },
+    {
+        "deviceId" : "possum_cam_0002",
+        "latitude" : 36.86552957309634,
+        "longitude" : -76.3007246863472
+    },
+    {
+        "deviceId" : "possum_cam_0003",
+        "latitude" : 36.86538043360591,
+        "longitude" : -76.30082728084402
+    },
+    {
+        "deviceId" : "possum_cam_0004",
+        "latitude" : 36.865353609925656,
+        "longitude" : -76.30090305325018
+    }
+]
